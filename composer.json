@@ -12,12 +12,15 @@
     "require": {
         "php": "^8.1",
         "codeigniter4/framework": "^4.0",
-        "codeigniter4/shield": "^1.0"
+        "codeigniter4/queue": "dev-develop",
+        "codeigniter4/shield": "^1.0",
+        "codeigniter4/tasks": "dev-develop"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9",
         "mikey179/vfsstream": "^1.6",
-        "phpunit/phpunit": "^10.5.16"
+        "phpunit/phpunit": "^10.5.16",
+        "rector/rector": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -27,6 +30,8 @@
             "**/Database/Migrations/**"
         ]
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload-dev": {
         "psr-4": {
             "Tests\\Support\\": "tests/_support"
@@ -35,9 +40,16 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+          "phpstan/extension-installer": true
+        }
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "phpunit",
+        "rector": "rector process --config .config/rector.php --dry-run",
+        "rector-fix": "rector process --config .config/rector.php",
+        "style": "php-cs-fixer fix --config=.config/.php-cs-fixer.dist.php --dry-run",
+        "style-fix": "php-cs-fixer --config=.config/.php-cs-fixer.dist.php fix"
     }
 }

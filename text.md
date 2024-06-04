@@ -1,0 +1,41 @@
+# Setup Tailwinds
+
+## Step 1: In the CodeIgniter project folder, run below commands to install package.json, node package and create blank tailwind.config.js
+
+```code
+npm init -y
+
+npm install -D tailwindcss
+
+npx tailwindcss init
+```
+
+## Step 2: Update tailwind.config.js as below:
+
+```code
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./app/Views/**/*.php"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+## Step 3: Create input.css with below code. You can create it anywhere. I created at app > Views > css > input.css
+
+```code
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+## Step 4: On terminal in CodeIgniter project folder, run below command. If you using different path for input.css and output css (mine styles.css) then change path accordingly.
+
+```code
+npx tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/styles.css --watch
+npx tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/styles.css --minify
+```
+
+Step 5: Now just include out css file (mine styles.css) in your php files. With Step 4 command, it will keep running, so if you add any tailwind css class in php file, it will automatically add that to output css file.
