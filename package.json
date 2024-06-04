@@ -1,0 +1,19 @@
+{
+  "name": "ci4-shield-tailwinds",
+  "version": "1.0.0",
+  "description": "Easy starter template for your codeIgniter4 framework that includes Shield Auth and Tailwinds CSS",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "Jay Lamping",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindscss": "^0.3.0"
+  }
+}
