@@ -44,7 +44,12 @@ Step 5: Now just include out css file (mine styles.css) in your php files. With 
 
 Fork it (https://github.com/MauiJay/ci4-shield-tailwinds/fork)
 
-- Create your branch (git checkout -b my-new-snippet)
-- Commit your changes (git commit -am 'Add some snippet')
-- Push to the branch (git push origin my-new-snippet)
+- Create your branch (git checkout -b my-new-branch)
+- Commit your changes (git commit -m 'Add some stuff')
+- Push to the branch (git push origin my-new-branch)
 - Create a new Pull Request.
+
+
+Hack is a language that also uses the PHP extension. You can override the auto-detection by specifying a different language in a .gitattributes file at the top level of the repository:
+
+*.php linguist-language=PHP
