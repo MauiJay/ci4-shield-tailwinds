@@ -20,7 +20,7 @@ POWERED BY Jay Lamping for 808.biz -v<?= CodeIgniter\CodeIgniter::CI_VERSION ?> 
 <!DOCTYPE html>
 <html lang="en-US" data-theme="light">  
   <?= $this->include('partials/front/_head') ?>
-  <body class="relative min-h-screen flex flex-col">
+  <body class="relative min-h-screen flex flex-col bg-slate-200">
     <?= $this->include('partials/front/_gtag_js') ?>
     <!--  Navbar  -->
     <?= $this->include('partials/front/_navbar') ?>    

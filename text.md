@@ -39,3 +39,12 @@ npx tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/styles.c
 ```
 
 Step 5: Now just include out css file (mine styles.css) in your php files. With Step 4 command, it will keep running, so if you add any tailwind css class in php file, it will automatically add that to output css file.
+
+## Contributing
+
+Fork it (https://github.com/MauiJay/ci4-shield-tailwinds/fork)
+
+- Create your branch (git checkout -b my-new-snippet)
+- Commit your changes (git commit -am 'Add some snippet')
+- Push to the branch (git push origin my-new-snippet)
+- Create a new Pull Request.
