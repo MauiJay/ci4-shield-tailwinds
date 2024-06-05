@@ -10,8 +10,8 @@
         "slack": "https://codeigniterchat.slack.com"
     },
     "require": {
-        "php": "^8.1",
-        "codeigniter4/framework": "^4.0",
+        "php": "^8.2",
+        "codeigniter4/framework": "^4.5",
         "codeigniter4/queue": "dev-develop",
         "codeigniter4/shield": "^1.0",
         "codeigniter4/tasks": "dev-develop"

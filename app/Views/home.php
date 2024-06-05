@@ -3,6 +3,7 @@
 <?= $this->section('content'); ?>
 <?= $this->include('partials/front/_hero') ?>
 
+
 <div class="bg-white relative   flex items-center  n justify-center overflow-hidden z-50 ">
 
   <div

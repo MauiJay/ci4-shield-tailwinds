@@ -52,4 +52,12 @@ Fork it (https://github.com/MauiJay/ci4-shield-tailwinds/fork)
 
 Hack is a language that also uses the PHP extension. You can override the auto-detection by specifying a different language in a .gitattributes file at the top level of the repository:
 
+```
 *.php linguist-language=PHP
+```
+
+### View cells
+```
+<?= view_cell('AlertMessageCell', 'type=success, message=alert cell updated successfully!.') ?>
+<?= view_cell('SampleListCell', 'type=info, message=This is a sample cell!.') ?>
+```
