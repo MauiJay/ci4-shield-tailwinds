@@ -1,39 +1,47 @@
 #-------------------------
-# Operating Specific Junk Files
+# Local server files
 #-------------------------
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
 
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-Desktop.ini
+#-------------------------
+# Generated Assets
+#-------------------------
+1.DoNotUpload/
+public/vendors/*
+public/assets/css/*
+public/assets/js/*
+!public/vendors/.gitkeep
+!public/assets/css/.gitkeep
+!public/assets/js/.gitkeep
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+public/uploads/*
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+app/Database/Migrations/*
+app/Database/Seeds/*
+!app/Database/Migrations/.gitkeep
+!app/Database/Seeds/.gitkeep
 
-# Windows shortcuts
-*.lnk
+vendor/*
 
-# Linux
-*~
 
-# KDE directory preferences
-.directory
 
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
+#-------------------------
+# Development only Files
+#-------------------------
+/node_modules
+phpunit.xml
+/mariadb
+/storage/minio
+src/*
 
 #-------------------------
 # Environment Files
 #-------------------------
 # These should never be under version control,
-# as it poses a security risk.
 .env
+.env.backup
 .vagrant
 Vagrantfile
 
@@ -55,45 +63,31 @@ writable/uploads/*
 writable/debugbar/*
 !writable/debugbar/.gitkeep
 
-writable/database.sqlite
+writable/database.db
 writable/**/*.db
 writable/**/*.sqlite
 
+.phpunit.result.cache
+npm-debug.log
+yarn-error.log
 php_errors.log
+.parcel-cache/*
+.php-cs-fixer.cache
 
-#-------------------------
-# User Guide Temp Files
-#-------------------------
-user_guide_src/build/*
-user_guide_src/cilexer/build/*
-user_guide_src/cilexer/dist/*
-user_guide_src/cilexer/pycilexer.egg-info/*
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-#-------------------------
-# Test Files
-#-------------------------
-tests/coverage*
+dist
+dist-ssr
+*.local
 
-# Don't save phpunit under version control.
-phpunit
-
-#-------------------------
-# Composer
-#-------------------------
-vendor/
-composer.lock
-
-#-------------------------
-# IDE / Development Files
-#-------------------------
-
-# Modules Testing
-_modules/*
-
-# phpenv local config
-.php-version
-
-# VS Code
+# Visual Studio Code
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
@@ -106,28 +100,3 @@ _modules/*
 /.phpunit.*.cache
 /.php-cs-fixer.php
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-dist-ssr
-*.local
-
-# next.js
-/.next/
-/out/
-/public/feeds/
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-1.DoNotUpload/
-public/vendors/
-public/assets/images/*
-public/assets/css/styles.css
-app/Database/Migrations/*
-app/Database/Seeds/*
