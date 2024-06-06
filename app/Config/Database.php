@@ -19,7 +19,7 @@ class Database extends Config
      */
     public string $defaultGroup = 'default';
 
-   /**
+    /**
      * The default database connection.
      *
      * @var array<string, mixed>
@@ -54,22 +54,28 @@ class Database extends Config
     //     * Sample database connection for SQLite3.
     //     *
     //     * @var array<string, mixed>
-    //     */
-    public array $default = [
-      'database'    => 'database.db',
-      'DBDriver'    => 'SQLite3',
-      'DBPrefix'    => '',
-      'DBDebug'     => true,
-      'swapPre'     => '',
-      'failover'    => [],
-      'foreignKeys' => true,
-      'busyTimeout' => 1000,
-      'dateFormat'  => [
-          'date'     => 'Y-m-d',
-          'datetime' => 'Y-m-d H:i:s',
-          'time'     => 'H:i:s',
-      ],
-  ];
+    // 
+
+        /**
+         * Sample database connection for SQLite3.
+         *
+         * @var array<string, mixed>
+         */
+        public array $default = [
+            'database'    => 'database.db',
+            'DBDriver'    => 'SQLite3',
+            'DBPrefix'    => '',
+            'DBDebug'     => true,
+            'swapPre'     => '',
+            'failover'    => [],
+            'foreignKeys' => true,
+            'busyTimeout' => 1000,
+            'dateFormat'  => [
+                'date'     => 'Y-m-d',
+                'datetime' => 'Y-m-d H:i:s',
+                'time'     => 'H:i:s',
+            ],
+        ];
 
     //    /**
     //     * Sample database connection for Postgre.

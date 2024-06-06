@@ -18,14 +18,12 @@
       <div>
         <p class="font-semibold text-gray-800 dark:text-white">Quick Link</p>
         <div class="mt-5 flex flex-col items-start space-y-2">
-          <a href="#"
+          <a href="/"
             class="text-gray-600 transition-colors duration-300 hover:text-blue-500 hover:underline dark:text-gray-300 dark:hover:text-blue-400">Home</a>
-          <a href="#"
-            class="text-gray-600 transition-colors duration-300 hover:text-blue-500 hover:underline dark:text-gray-300 dark:hover:text-blue-400">Who
-            We Are</a>
-          <a href="#"
-            class="text-gray-600 transition-colors duration-300 hover:text-blue-500 hover:underline dark:text-gray-300 dark:hover:text-blue-400">Our
-            Philosophy</a>
+          <a href="<?= url_to('terms') ?>"
+            class="text-gray-600 transition-colors duration-300 hover:text-blue-500 hover:underline dark:text-gray-300 dark:hover:text-blue-400">Terms of Service</a>
+          <a href="<?= url_to('privacy') ?>"
+            class="text-gray-600 transition-colors duration-300 hover:text-blue-500 hover:underline dark:text-gray-300 dark:hover:text-blue-400">Privacy Policy</a>
         </div>
       </div>
       <div>
@@ -68,10 +66,12 @@
     </div>
     <hr class="my-6 border-gray-200 dark:border-gray-700 md:my-10" />
     <div class="flex flex-col items-center justify-between sm:flex-row">
-      <a href="#"
-        class="text-2xl font-bold text-gray-800 transition-colors duration-300 hover:text-gray-700 dark:text-white dark:hover:text-gray-300">Brand
-        Logo</a>
-      <p class="mt-4 text-sm text-gray-500 dark:text-gray-300 sm:mt-0">© Copyright 2024. All Rights Reserved.</p>
+      <a href="<?= site_url('/') ?>"
+        class="text-2xl font-bold text-gray-800 transition-colors duration-300 hover:text-gray-700 dark:text-white dark:hover:text-gray-300"><?= config('App')->siteName ?>
+      </a>
+      <p class="mt-4 text-sm text-gray-500 dark:text-gray-300 sm:mt-0">
+        © <?php if (! empty(config('App')->copyrightHolder)) : ?> Copyright <?= date('Y') ?> <?= config('App')->copyrightHolder ?> - All Rights Reserved <?php endif ?>
+      </p>
     </div>
   </div>
 </footer>

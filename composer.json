@@ -1,28 +1,22 @@
 {
-    "name": "codeigniter4/appstarter",
-    "description": "CodeIgniter4 starter app",
-    "license": "MIT",
-    "type": "project",
-    "homepage": "https://codeigniter.com",
-    "support": {
-        "forum": "https://forum.codeigniter.com/",
-        "source": "https://github.com/codeigniter4/CodeIgniter4",
-        "slack": "https://codeigniterchat.slack.com"
-    },
-    "require": {
-        "php": "^8.2",
-        "codeigniter4/framework": "^4.5",
-        "codeigniter4/queue": "dev-develop",
-        "codeigniter4/shield": "^1.0",
-        "codeigniter4/tasks": "dev-develop"
-    },
-    "require-dev": {
-        "fakerphp/faker": "^1.9",
-        "mikey179/vfsstream": "^1.6",
-        "phpunit/phpunit": "^10.5.16",
-        "rector/rector": "^1.0"
-    },
-    "autoload": {
+  "name": "mauijay/shieldtailwindcss",
+  "description": "CodeIgniter4 starter template with Shield Auth, Vite, Tailwind",
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": "^8.2",
+    "codeigniter4/framework": "^4.5",
+    "codeigniter4/shield": "^1.0",
+    "codeigniter4/queue": "dev-develop",
+    "codeigniter4/tasks": "dev-develop",
+    "firebase/php-jwt": "^6.4"
+  },
+  "require-dev": {
+    "codeigniter/phpstan-codeigniter": "^1.4",
+    "codeigniter4/devkit": "^1.1",
+    "rector/rector": "^1.0"   
+  },
+  "autoload": {
         "psr-4": {
             "App\\": "app/"
         },
@@ -30,26 +24,30 @@
             "**/Database/Migrations/**"
         ]
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\Support\\": "tests/_support"
-        }
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "allow-plugins": {
-          "phpstan/extension-installer": true
-        }
-    },
-    "scripts": {
-        "test": "phpunit",
-        "rector": "rector process --config .config/rector.php --dry-run",
-        "rector-fix": "rector process --config .config/rector.php",
-        "style": "php-cs-fixer fix --config=.config/.php-cs-fixer.dist.php --dry-run",
-        "style-fix": "php-cs-fixer --config=.config/.php-cs-fixer.dist.php fix"
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\Support\\": "tests/_support"
     }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+    "phpstan/extension-installer": true
+    }
+  },
+  "scripts": {
+    "cs": "php-cs-fixer fix --ansi --verbose --dry-run --diff",
+    "cs-fix": "php-cs-fixer fix --ansi --verbose --diff",
+    "style-jay": "@cs-fix",
+    "test": "phpunit",
+    "rector": "rector process --config .config/rector.php --dry-run",
+    "rector-fix": "rector process --config .config/rector.php",
+    "style": "php-cs-fixer fix --config=.config/.php-cs-fixer.dist.php --dry-run",
+    "style-fix": "php-cs-fixer --config=.config/.php-cs-fixer.dist.php fix"
+  },   
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "version": "0.0.1"
 }

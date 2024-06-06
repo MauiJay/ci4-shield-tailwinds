@@ -1,14 +1,3 @@
-#--------------------------------------------------------------------
-# Example Environment Configuration file
-#
-# This file can be used as a starting point for your own
-# custom .env files, and contains most of the possible settings
-# available in a default install.
-#
-# By default, all of the settings are commented out. If you want
-# to override the setting, you must un-comment it by removing the '#'
-# at the beginning of the line.
-#--------------------------------------------------------------------
 
 #--------------------------------------------------------------------
 # ENVIRONMENT
@@ -20,9 +9,37 @@ CI_ENVIRONMENT = development
 # APP
 #--------------------------------------------------------------------
 
- app.baseURL = 'http://localhost:8080/'
+app.baseURL = 'http://localhost:8080/'
 # If you have trouble with `.`, you could also use `_`.
 # app_baseURL = ''
 # app.forceGlobalSecureRequests = false
 # app.CSPEnabled = false
-jj
+
+#--------------------------------------------------------------------
+# ENCRYPTION
+#--------------------------------------------------------------------
+
+# encryption.key =
+
+authjwt.keys.default.0.secret = 8XBFsF6HThIa7OV/bSynahEch+WbKrGcuiJVYPiwqPE=
+# jwt access
+access_token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJTaGllbGQgVGVzdCBBcHAiLCJzdWIiOiIxIiwiaWF0IjoxNjgxODA1OTMwLCJleHAiOjE2ODE4MDk1MzB9.DGpOmRPOBe45whVtEOSt53qJTw_CpH0V8oMoI_gm2XI
+
+# hmac access
+name = MacBook_Air
+key = 9f6ea7ab9f78f33d3a3465d75bf76c16
+secretKey = Dg2g47PAfHQjlJYFYGHRt4MedNqNnSj5/u5zHyVu6jA=
+
+#--------------------------------------------------------------------
+# VITE
+#--------------------------------------------------------------------
+
+VITE_SERVE = true
+VITE_HOST = 'localhost'
+VITE_PORT = 5173
+
+#--------------------------------------------------------------------
+# UPLOADS
+#--------------------------------------------------------------------
+
+imageupload.fileSize = 2048

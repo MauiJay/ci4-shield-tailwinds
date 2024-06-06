@@ -1,24 +1,31 @@
 {
-  "name": "ci4-shield-tailwinds",
-  "version": "1.0.0-dev",
-  "browserslist": "> 0.5%, last 2 versions, not dead",
-  "description": "Easy starter template for your codeIgniter4 framework that includes Shield Auth and Tailwinds CSS",
-  "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
+  "name": "ci4-shield-vite-tw",
+  "private": true,
+  "version": "0.0.2-dev",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/styles.css --watch"
+    "test": "echo \"Error: no test specified you big dummy\" && exit 1",
+    "dev-run": "npx tailwindcss -i ./src/assets/input.css -o ./public/assets/css/styles.css --watch",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "Jay Lamping",
-  "license": "ISC",
+  "dependencies": {    
+    "@easepick/core": "^1.2.1",
+    "@easepick/range-plugin": "^1.2.1",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.0",
+    "vue": "^3.4.21",
+    "highlight.js": "^11.9.0"
+  },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
+    "@vitejs/plugin-vue": "^5.0.4",
     "daisyui": "^4.7.2",
+    "easymde": "^2.18.0",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.2.0"
   }
 }

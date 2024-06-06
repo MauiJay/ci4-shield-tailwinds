@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Libraries\Policies\Policy;
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\CLIRequest;
 use CodeIgniter\HTTP\IncomingRequest;
@@ -19,40 +20,67 @@ use Psr\Log\LoggerInterface;
  *
  * For security be sure to declare any new methods as protected or private.
  */
-abstract class BaseController extends Controller
-{
-    /**
-     * Instance of the main Request object.
-     *
-     * @var CLIRequest|IncomingRequest
-     */
-    protected $request;
+abstract class BaseController extends Controller {
+  /**
+   * The name of the current theme.
+   * Must be within /themes directory.
+   */
+  protected ?string $theme = null;
+  /**
+   * Instance of the main Request object.
+   *
+   * @var CLIRequest|IncomingRequest
+   */
+  protected $request;
 
-    /**
-     * An array of helpers to be loaded automatically upon
-     * class instantiation. These helpers will be available
-     * to all other controllers that extend BaseController.
-     *
-     * @var list<string>
-     */
-    protected $helpers = ['form'];
+  /**
+   * An array of helpers to be loaded automatically upon
+   * class instantiation. These helpers will be available
+   * to all other controllers that extend BaseController.
+   *
+   * @var list<string>
+   */
+  protected $helpers = [];
 
-    /**
-     * Be sure to declare properties for any property fetch you initialized.
-     * The creation of dynamic property is deprecated in PHP 8.2.
-     */
-    // protected $session;
+  /**
+   * Policy instance for additional authorization.
+   */
+  protected Policy $policy;
 
-    /**
-     * @return void
-     */
-    public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
-    {
-        // Do Not Edit This Line
-        parent::initController($request, $response, $logger);
+  /**
+   * Be sure to declare properties for any property fetch you initialized.
+   * The creation of dynamic property is deprecated in PHP 8.2.
+   */
+  // protected $session;
 
-        // Preload any models, libraries, etc, here.
+  /**
+   * @return void
+   */
+  public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
+  {
+    $this->helpers = [...$this->helpers, 'alerts', 'cookie', 'form'];
 
-        // E.g.: $this->session = \Config\Services::session();
-    }
+    // Do Not Edit This Line
+    parent::initController($request, $response, $logger);
+
+    // Preload any models, libraries, etc, here.
+
+    // E.g.: $this->session = \Config\Services::session();
+
+    $this->policy = service('policy');
+
+    $this->theme ??= config('MyApp')->themeName;
+  }
+
+  /**
+   * Render a view file.
+   *
+   * Must be used in order to utilize the theme system.
+   */
+  protected function render(string $view, array $data = []): string
+  {
+    return service('theme')
+      ->setTheme($this->theme)
+      ->render($view, $data);
+  }
 }

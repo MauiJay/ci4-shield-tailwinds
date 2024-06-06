@@ -8,6 +8,25 @@ class App extends BaseConfig
 {
     /**
      * --------------------------------------------------------------------------
+     * Site Name
+     * --------------------------------------------------------------------------
+     *
+     * The name of your site.
+     */
+    public string $siteName = '808biz:MyApp';
+
+    /**
+     * --------------------------------------------------------------------------
+     * Copyright Holder
+     * --------------------------------------------------------------------------
+     *
+     * Who should be listed as the copyright holder.
+     * Displays in footer. Leave empty for no display.
+     */
+    public string $copyrightHolder = 'MyApp.com';
+    
+    /**
+     * --------------------------------------------------------------------------
      * Base Site URL
      * --------------------------------------------------------------------------
      *
@@ -16,7 +35,7 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = '';
+    public string $baseURL = 'http://localhost:8080/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

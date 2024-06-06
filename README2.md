@@ -2,9 +2,19 @@
 
 ## Step 1: In the CodeIgniter project folder, run below commands to install package.json, node package and create blank tailwind.config.js
 
-```code
-npm init -y
+With Vite
 
+```
+npm create vite@latest . -- --template vue
+```
+or without (only choose one)
+
+```
+npm init -y
+```
+### Now add Tailwind css
+
+```
 npm install -D tailwindcss
 
 npx tailwindcss init
@@ -60,4 +70,31 @@ Hack is a language that also uses the PHP extension. You can override the auto-d
 ```
 <?= view_cell('AlertMessageCell', 'type=success, message=alert cell updated successfully!.') ?>
 <?= view_cell('SampleListCell', 'type=info, message=This is a sample cell!.') ?>
+```
+
+```
+import inject from "@rollup/plugin-inject";
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    vue()
+  ],
+  build: {
+    // generate manifest.json in outDir
+    manifest: true,
+    rollupOptions: {
+      // overwrite default .html entry
+      input: [
+        "./themes/default/css/app.scss",
+        "./themes/default/js/app.js",
+        "./themes/admin/css/admin.scss",
+        "./themes/admin/js/admin.js",
+      ],
+    },
+    outDir: "./public/assets/",
+  },
+})
 ```

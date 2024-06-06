@@ -13,3 +13,40 @@
  *
  * @see: https://codeigniter.com/user_guide/extending/common.html
  */
+use App\Libraries\Theme;
+  use CodeIgniter\Config\Factories;
+
+  if (! function_exists('policy')) {
+      /**
+       * A convenience method for accessing the Policy service.
+       */
+      function policy(string $permission, mixed ...$arguments): bool
+      {
+          return service('policy')->can($permission, ...$arguments);
+      }
+  }
+
+  if (! function_exists('theme')) {
+    /**
+     * A convenience method for accessing the Theme service.
+     * Especially useful for views.
+     */
+    function theme(): Theme
+    {
+        return service('theme');
+    }
+  }
+
+  /**
+ * Generates the URLs to the vite resources.
+ */
+function vite(string|array $path): string
+{
+    $vite = service('vite');
+
+    if (! is_array($path)) {
+        $path = [$path];
+    }
+
+    return $vite->links($path);
+}

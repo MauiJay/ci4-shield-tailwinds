@@ -5,8 +5,9 @@
  * 
  */
 
-
+echo
 ' <!-- Google tag (gtag.js) -->
   <script></script>
+  <!--' . $title . '-->
   <!-- End Google Tag -->
 ';

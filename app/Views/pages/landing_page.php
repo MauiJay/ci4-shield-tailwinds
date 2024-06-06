@@ -25,7 +25,7 @@
 
 
           <h1
-            class="font-extrabold leading-10 tracking-tight text-left text-[#201515] text-center sm:leading-none text-5xl sm:text-9xl">
+            class="font-extrabold leading-10 tracking-tight text-left text-[#201515] sm:leading-none text-5xl sm:text-9xl">
             <span class="inline md:block">Building Good </span>
             <span class="relative mt-2 bg-clip-text text-[#201515] md:inline-block">Software.</span>
           </h1>

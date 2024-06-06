@@ -2,7 +2,15 @@
 
 namespace Config;
 
+use App\Libraries\Alerts;
+use App\Libraries\Policies\Policy;
+use App\Libraries\Theme;
+use App\Libraries\View;
+use App\Libraries\Vite;
 use CodeIgniter\Config\BaseService;
+use CodeIgniter\Shield\Authentication\Passwords;
+use CodeIgniter\Shield\Config\Auth;
+use Config\View as ViewConfig;
 
 /**
  * Services Configuration file.
@@ -20,13 +28,96 @@ use CodeIgniter\Config\BaseService;
 class Services extends BaseService
 {
     /*
-     * public static function example($getShared = true)
+     * public static function sample($getShared = true)
      * {
      *     if ($getShared) {
-     *         return static::getSharedInstance('example');
+     *         return static::getSharedInstance('sample');
      *     }
      *
-     *     return new \CodeIgniter\Example();
+     *     return new \CodeIgniter\Sample();
      * }
      */
+
+     public static function policy($getShared = true): Policy
+     {
+         if ($getShared) {
+             return static::getSharedInstance('policy');
+         }
+ 
+         return new Policy();
+     }
+
+     /**
+     * Returns the Theme library.
+     */
+    public static function theme(bool $getShared = true)
+    {
+        if ($getShared) {
+            return static::getSharedInstance('theme');
+        }
+
+        return new Theme();
+    }
+
+    public static function alerts($getShared = true): Alerts
+    {
+        if ($getShared) {
+            return static::getSharedInstance('alerts');
+        }
+
+        return new Alerts(config(MyApp::class), static::session());
+    }
+
+    /**
+     * Override Shield's Password utilities to allow using setting() helper.
+     */
+    public static function passwords(bool $getShared = true): Passwords
+    {
+        if ($getShared) {
+            return self::getSharedInstance('passwords');
+        }
+
+        /** @var Auth $config */
+        $config = config('Auth');
+
+        if ($options = setting('Auth.allowRegistration')) {
+            $config->allowRegistration = $options;
+        }
+        if ($options = setting('Auth.passwordValidators')) {
+            $config->passwordValidators = $options;
+        }
+        if ($options = setting('Auth.actions')) {
+            $config->actions = $options;
+        }
+        if ($options = setting('Auth.sessionConfig')) {
+            $config->sessionConfig = $options;
+        }
+
+        return new Passwords($config);
+    }
+
+    /**
+     * Use our custom App\Libraries\View class instead of the default
+     * to provide additional functionality.
+     */
+    public static function renderer(?string $viewPath = null, ?ViewConfig $config = null, bool $getShared = true)
+    {
+        if ($getShared) {
+            return static::getSharedInstance('renderer', $viewPath, $config);
+        }
+
+        $viewPath = $viewPath ?: (new Paths())->viewDirectory;
+        $config ??= config(ViewConfig::class);
+
+        return new View($config, $viewPath, service('locator'), CI_DEBUG, service('logger'));
+    }
+
+    public static function vite($getShared = true): Vite
+    {
+        if ($getShared) {
+            return static::getSharedInstance('vite');
+        }
+
+        return new Vite();
+    }
 }
