@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+  <!-- Jay -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,6 @@
 </head>
 <body class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">
     <script src="//unpkg.com/alpinejs" defer></script>
-
 <main>
     <section class="bg-white dark:bg-gray-900">
     <nav x-data="{ isOpen: false }" class="container mx-auto p-6 lg:flex lg:items-center lg:justify-between">
@@ -16,7 +16,6 @@
         <div>
             <a class="text-2xl font-bold text-gray-800 hover:text-gray-700 dark:text-white dark:hover:text-gray-300 lg:text-3xl" href="#">Brand</a>
         </div>
-
         <!-- Mobile menu button -->
         <div class="flex lg:hidden">
             <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 hover:text-gray-600 focus:text-gray-600 focus:outline-none dark:text-gray-200 dark:hover:text-gray-400 dark:focus:text-gray-400" aria-label="toggle menu">

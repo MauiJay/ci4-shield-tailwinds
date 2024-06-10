@@ -108,44 +108,7 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class=" flex items-center justify-center">
-      <div class="card bg-base-100 shadow-xl image-full w-full aspect-video">
-        <figure><img src="<?= base_url('assets/images/400x200.png') ?>" alt="Shoes"
-            class=" object-cover w-full h-full" /></figure>
-        <label for="modal4" class="card-body items-center justify-center text-center">
-          <h2 class="card-title">Service 3A</h2>
-          <span>Subtitle</span>
-        </label>
-        <input type="checkbox" id="modal4" class="modal-toggle" />
-        <div class="modal" role="dialog">
-          <div class="modal-box max-w-[50rem]">
-            <h3 class="font-bold text-lg text-center">Service 3A</h3>
-            <div class=" text-justify flex flex-col">
-              <span><strong>Schedule:</strong></span>
-              <span>- Monday (11:30 AM - DMV)</span>
-            </div>
-            <div class=" flex flex-col text-justify whitespace-pre-line">
-              <strong>Requirements:</strong>
-              1. xxx
-              2. xxx
-              3. xxx
-              4. xxx
-              5. xxx
-
-              <strong>Notes:</strong>
-              - xxx
-              - xxx
-              - xxx
-              - xxx
-            </div>
-            <div class="modal-action justify-center">
-              <label for="modal4" class="btn btn-outline btn-error">Close</label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </div>    
     <div class=" flex items-center justify-center">
       <div class="card bg-base-100 shadow-xl image-full w-full aspect-video">
         <figure><img src="<?= base_url('assets/images/400x200.png') ?>" alt="Shoes"
@@ -342,7 +305,6 @@
   <div class="container mx-auto px-6 py-8">
     <h2 class="text-center text-3xl font-semibold capitalize text-gray-800 dark:text-white lg:text-4xl">Pricing Plan
     </h2>
-
     <p class="mx-auto mt-4 max-w-2xl text-center text-gray-500 dark:text-gray-300 xl:mt-6">Lorem ipsum, dolor sit amet
       consectetur adipisicing elit. Alias quas magni libero consequuntur voluptatum velit amet id repudiandae ea,
       deleniti laborum in neque eveniet.</p>
