@@ -6,26 +6,39 @@ Homestead.json
 Homestead.yaml
 
 #-------------------------
-# Generated Assets
+# Public Generated Assets
 #-------------------------
 1.DoNotUpload/
+
+public/*
+!public/.htaccess
+!public/favicon.ico
+!public/index.php
+!public/robots.txt
+!public/.well-known
+!public/.well-known/GDPR.yml
+
+public/assets/*
+!public/assets/index.html
+
 public/vendors/*
-public/assets/css/*
-public/assets/js/*
+!public/vendors/index.html
 !public/vendors/.gitkeep
+
+public/assets/css/*
 !public/assets/css/.gitkeep
+
+public/assets/js/*
 !public/assets/js/.gitkeep
 
 public/uploads/*
+!public/uploads/index.html
 
 app/Database/Migrations/*
-app/Database/Seeds/*
 !app/Database/Migrations/.gitkeep
+
+app/Database/Seeds/*
 !app/Database/Seeds/.gitkeep
-
-vendor/*
-
-
 
 #-------------------------
 # Development only Files
@@ -97,6 +110,6 @@ dist-ssr
 *.code-workspace
 /results/
 /phpunit*.xml
-/.phpunit.*.cache
 /.php-cs-fixer.php
 
+vendor

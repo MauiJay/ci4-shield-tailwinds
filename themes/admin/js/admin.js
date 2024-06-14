@@ -1,10 +1,5 @@
-import "./htmx.js";
-import "htmx.org/dist/ext/loading-states";
-import Alpine from "alpinejs";
-import alerts from "./components/alerts.js";
-import "./components/themeSwitch.js";
+import { createApp } from 'vue'
+import './assets/input.css'
+import App from './App.vue'
 
-// Alpine
-Alpine.data("alerts", alerts);
-window.Alpine = Alpine;
-Alpine.start();
+createApp(App).mount('#app')

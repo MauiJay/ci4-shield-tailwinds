@@ -8,6 +8,7 @@ module.exports = {
     "./themes/**/**/**/**/*.{html,php,js,ts,jsx,tsx}",
     "./app/Views/**/*.{html,php,js,ts,jsx,tsx}",
     "./app/Views/**/**/*.{html,php,js,ts,jsx,tsx}",
+    "./modules/**/Views/**/*.php"
   ],
   safelist: [
     "alert-success",
@@ -72,5 +73,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [require("daisyui")],
 }
