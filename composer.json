@@ -29,6 +29,12 @@
       "Tests\\Support\\": "tests/_support"
     }
   },
+  "scripts": {
+    "test": "phpunit"    
+  },    
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "version": "0.0.1",
   "config": {
     "optimize-autoloader": true,
     "preferred-install": "dist",
@@ -36,11 +42,5 @@
     "allow-plugins": {
     "phpstan/extension-installer": true
     }
-  },
-  "scripts": {
-    "test": "phpunit"    
-  },   
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "version": "0.0.1"
+  }
 }
