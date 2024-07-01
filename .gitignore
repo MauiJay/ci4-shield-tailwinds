@@ -10,6 +10,8 @@ Homestead.yaml
 #-------------------------
 1.DoNotUpload/
 
+vendor/
+
 public/*
 !public/.htaccess
 !public/favicon.ico
@@ -40,11 +42,14 @@ app/Database/Migrations/*
 app/Database/Seeds/*
 !app/Database/Seeds/.gitkeep
 
+# Don't save phpunit under version control.
+phpunit
+
+
 #-------------------------
 # Development only Files
 #-------------------------
-/node_modules
-phpunit.xml
+node_modules
 /mariadb
 /storage/minio
 src/*
@@ -80,12 +85,11 @@ writable/database.db
 writable/**/*.db
 writable/**/*.sqlite
 
-.phpunit.result.cache
+
 npm-debug.log
 yarn-error.log
 php_errors.log
 .parcel-cache/*
-.php-cs-fixer.cache
 
 # Logs
 logs
@@ -109,7 +113,10 @@ dist-ssr
 !.vscode/extensions.json
 *.code-workspace
 /results/
-/phpunit*.xml
-/.php-cs-fixer.php
 
-vendor
+
+# CS Fixer
+.php-cs-fixer.cache
+.php-cs-fixer.php
+
+
