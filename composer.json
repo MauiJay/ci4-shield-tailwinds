@@ -6,16 +6,16 @@
   "require": {
     "php": "^8.2",
     "codeigniter4/framework": "^4.5",
-    "codeigniter4/shield": "^1.0",
+    "codeigniter4/shield": "^1.1",
     "codeigniter4/queue": "dev-develop",
     "codeigniter4/tasks": "dev-develop",
-    "firebase/php-jwt": "^6.4"
+    "firebase/php-jwt": "^6.10"
   },
   "require-dev": {
     "codeigniter/phpstan-codeigniter": "^1.4",
-    "codeigniter4/devkit": "^1.1",
-    "rector/rector": "^1.0",
-    "fakerphp/faker": "^1.9",
+    "codeigniter4/devkit": "^1.2",
+    "rector/rector": "^1.2",
+    "fakerphp/faker": "^1.23",
     "mikey179/vfsstream": "^1.6",
     "phpunit/phpunit": "^10.5.16"   
   },

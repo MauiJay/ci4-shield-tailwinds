@@ -42,10 +42,6 @@ app/Database/Migrations/*
 app/Database/Seeds/*
 !app/Database/Seeds/.gitkeep
 
-# Don't save phpunit under version control.
-phpunit
-
-
 #-------------------------
 # Development only Files
 #-------------------------
@@ -110,9 +106,14 @@ dist-ssr
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
-!.vscode/extensions.json
 *.code-workspace
+
 /results/
+
+# Don't save phpunit under version control.
+phpunit
+/phpunit*.xml
+/.phpunit.*.cache
 
 
 # CS Fixer

@@ -3,11 +3,7 @@
 module.exports = {
   content: [
     "./themes/**/*.{html,php,js,ts,jsx,tsx}",
-    "./themes/**/**/*.{html,php,js,ts,jsx,tsx}",
-    "./themes/**/**/**/*.{html,php,js,ts,jsx,tsx}",
-    "./themes/**/**/**/**/*.{html,php,js,ts,jsx,tsx}",
     "./app/Views/**/*.{html,php,js,ts,jsx,tsx}",
-    "./app/Views/**/**/*.{html,php,js,ts,jsx,tsx}",
     "./modules/**/Views/**/*.php"
   ],
   safelist: [

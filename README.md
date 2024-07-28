@@ -43,7 +43,7 @@ module.exports = {
 }
 ```
 
-## Step 3: Create input.css with below code. You can create it anywhere. I created at app > Views > css > input.css
+## Step 3: Create input.css with below code. You can create it anywhere. I created at src > assets > input.css
 
 ```code
 @tailwind base;
@@ -54,8 +54,8 @@ module.exports = {
 ## Step 4: On terminal in CodeIgniter project folder, run below command. If you using different path for input.css and output css (mine styles.css) then change path accordingly.
 
 ```code
-npx tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/styles.css --watch
-npx tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/styles.css --minify
+npx tailwindcss -i ./src/assets/input.css -o ./public/assets/css/styles.css --watch
+npx tailwindcss -i ./src/assets/input.css -o ./public/assets/css/styles.css --minify
 ```
 
 Step 5: Now just include out css file (mine styles.css) in your php files. With Step 4 command, it will keep running, so if you add any tailwind css class in php file, it will automatically add that to output css file.
