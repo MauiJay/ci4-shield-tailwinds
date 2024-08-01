@@ -1,6 +1,6 @@
 # Codeigniter4-Shield-Tailwind Template
 
-A work in progress
+A work in progress, add dependabot
 
 ## Setup Tailwinds
 
@@ -11,11 +11,13 @@ With Vite
 ```
 npm create vite@latest . -- --template vue
 ```
+
 or without (only choose one)
 
 ```
 npm init -y
 ```
+
 ### Now add Tailwind css
 
 ```
@@ -58,7 +60,9 @@ npx tailwindcss -i ./src/assets/input.css -o ./public/assets/css/styles.css --wa
 npx tailwindcss -i ./src/assets/input.css -o ./public/assets/css/styles.css --minify
 ```
 
-Step 5: Now just include out css file (mine styles.css) in your php files. With Step 4 command, it will keep running, so if you add any tailwind css class in php file, it will automatically add that to output css file.
+Step 5: Now just include out css file (mine styles.css) in your php files. With
+Step 4 command, it will keep running, so if you add any tailwind css class in
+php file, it will automatically add that to output css file.
 
 ## Contributing
 
@@ -69,14 +73,16 @@ Fork it (https://github.com/MauiJay/ci4-shield-tailwinds/fork)
 - Push to the branch (git push origin my-new-branch)
 - Create a new Pull Request.
 
-
-Hack is a language that also uses the PHP extension. You can override the auto-detection by specifying a different language in a .gitattributes file at the top level of the repository:
+Hack is a language that also uses the PHP extension. You can override the
+auto-detection by specifying a different language in a .gitattributes file at
+the top level of the repository:
 
 ```
 *.php linguist-language=PHP
 ```
 
 ### View cells
+
 ```
 <?= view_cell('AlertMessageCell', 'type=success, message=alert cell updated successfully!.') ?>
 <?= view_cell('SampleListCell', 'type=info, message=This is a sample cell!.') ?>
