@@ -15,7 +15,7 @@ _\ \ (_) | | |_| | |_| | (_) | | | \__ \
 Visit https://808.biz for Marketing Ideas in Hawaii.
 808BusinessSolutions - helping local business grow your online presence throuhn webdesign, social media and advertising.
 Visit https://808businesssolutions.com for your web development and success.  
-POWERED BY Jay Lamping for 808.biz -v<?= CodeIgniter\CodeIgniter::CI_VERSION ?> | <?=date("m-d-Y H:i:s") ?>, Last Updat June 5, 2024 
+POWERED BY Jay Lamping for 808.biz -v<?= CodeIgniter\CodeIgniter::CI_VERSION ?> | <?=date("m-d-Y H:i:s") ?>, Last Updat Sept 3, 2024 
 <?= $title ?? 'Private work for 808biz, Inc' ?> | jaycadla@gmail.com -->
 
 <!DOCTYPE html>
