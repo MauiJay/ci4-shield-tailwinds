@@ -19,8 +19,7 @@
             <span
               class="my-1 inline-block border-b-8 border-g4 bg-white px-4 font-bold text-g4 animate__animated animate__flash">different</span>
           </h2>
-          <p class="text-base text-gray-700">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque it.</p>
+          <p class="text-base text-gray-700">We are a Hawaii registered agent service that helps out of state businesses register to do business in Hawaii, and helps keep local Hawaii businesses in good standing with the Hawaii Secretary of State by acting as your registered agent.</p>
           <div class="mt-10 flex flex-col items-center md:flex-row">
             <a href="/services"
               class="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-green-600 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-blue-800 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
