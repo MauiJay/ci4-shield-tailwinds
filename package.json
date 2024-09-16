@@ -27,7 +27,7 @@
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "daisyui": "^4.12.10",
-    "postcss": "^8.4.38",
+    "postcss": "^8.4.45",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.4.10",
