@@ -114,5 +114,7 @@ export default defineConfig({
   },
 })
 ```
+
 ## dependabot
+
  @dependabot rebase

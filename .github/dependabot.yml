@@ -13,15 +13,15 @@ updates:
   - package-ecosystem: "composer" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: 'daily'
+      interval: "daily"
     open-pull-requests-limit: 10
 
-  - package-ecosystem: 'github-actions'
-    directory: '/'
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: 'daily'
+      interval: "daily"
     ignore:
-      - dependency-name: '*'
+      - dependency-name: "*"
         update-types:
-          - 'version-update:semver-minor'
-          - 'version-update:semver-patch'  
+          - "version-update:semver-minor"
+          - "version-update:semver-patch"
