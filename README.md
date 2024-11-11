@@ -34,7 +34,7 @@ folder:
 **Using Composer:**
 
 ```bash
-composer create-project MauiJay/ci4-shield-tailwinds ci4_starter --stability=dev
+composer create-project MauiJay/ci4-shield-tailwinds ci4_starter --stability dev
 ```
 
 **Or using Git:**
