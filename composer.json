@@ -5,7 +5,7 @@
   "type": "project",
   "require": {
     "php": "^8.2",
-    "codeigniter4/framework": "^4.5",
+    "codeigniter4/framework": "^4.5.5",
     "codeigniter4/shield": "dev-develop",
     "codeigniter4/queue": "dev-develop",
     "codeigniter4/tasks": "dev-develop",
@@ -17,25 +17,25 @@
     "rector/rector": "^1.2",
     "fakerphp/faker": "^1.23",
     "mikey179/vfsstream": "^1.6",
-    "phpunit/phpunit": "^10.5.16"   
+    "phpunit/phpunit": "^10.5.16"
   },
   "autoload": {
-        "psr-4": {
-            "App\\": "app/",
-            "Config\\": "app/Config"
-        },
-        "exclude-from-classmap": [
-            "**/Database/Migrations/**"
-        ]
+    "psr-4": {
+      "App\\": "app/",
+      "Config\\": "app/Config"
     },
+    "exclude-from-classmap": [
+      "**/Database/Migrations/**"
+    ]
+  },
   "autoload-dev": {
     "psr-4": {
       "Tests\\Support\\": "tests/_support"
     }
   },
   "scripts": {
-    "test": "phpunit"    
-  },    
+    "test": "phpunit"
+  },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "version": "0.0.2",
@@ -44,7 +44,7 @@
     "preferred-install": "dist",
     "sort-packages": true,
     "allow-plugins": {
-    "phpstan/extension-installer": true
+      "phpstan/extension-installer": true
     }
   }
 }
