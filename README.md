@@ -12,8 +12,8 @@ This repository includes:
 
 - CodeIgniter v4.5.5
 - CodeIgniter Shield v1.1.0
-- Tailwind
-- Vite
+- Tailwind v3.4.14
+- Vite v5.4.10
 
 ## Requirements
 
