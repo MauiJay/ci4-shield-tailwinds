@@ -32,7 +32,7 @@
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.15",
     "vite": "^6.0.1",
-    "vite-plugin-pwa": "^0.21.0",
+    "vite-plugin-pwa": "^0.21.1",
     "workbox-build": "^7.3.0",
     "workbox-core": "^7.1.0",
     "workbox-routing": "^7.1.0",
